@@ -12,10 +12,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from lemonade device
 $(call inherit-product, device/oneplus/lemonade/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common euclid stuff.
+$(call inherit-product, vendor/euclid/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_lemonade
+PRODUCT_NAME := euclid_lemonade
 PRODUCT_DEVICE := lemonade
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -30,3 +30,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=OnePlus9 \
     SystemDevice=OnePlus9 \
     SystemName=OnePlus9
+
+# euclidOS Stuffs
+EUCLID_BUILD_TYPE := OFFICIAL
+EUCLID_MAINTAINER := Mrick343
+EUCLID_DEVICE := OnePlus_9
+EUCLID_PROCESSOR := Snapdragon_888_5G
+TARGET_SUPPORTS_QUICK_TAP := true
